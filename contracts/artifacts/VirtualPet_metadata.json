@@ -1,0 +1,256 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "PetAlreadyExists",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PetDoesNotExist",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "PetIsDead",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TooSoonToFeed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "PetCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "PetDied",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "newHunger",
+						"type": "uint8"
+					}
+				],
+				"name": "PetFed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "newLevel",
+						"type": "uint8"
+					}
+				],
+				"name": "PetLevelUp",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "checkPet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createPet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "feedPet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPetInfo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "hunger",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "happiness",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint16",
+						"name": "experience",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "level",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "isAlive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "pets",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "hunger",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "happiness",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint16",
+						"name": "experience",
+						"type": "uint16"
+					},
+					{
+						"internalType": "uint8",
+						"name": "level",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastFed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isAlive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/virtual-pet.sol": "VirtualPet"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/virtual-pet.sol": {
+			"keccak256": "0xa4ea5f6aa574dd47384f5ad551129a3d3fe6dc901c0eb521029bb27dd6d1e381",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8723a3c6ee63d9629c078c4192bfdc251a2e2cdefed3cccb5aa1f3b9acbe656f",
+				"dweb:/ipfs/QmdcZnFsEZQ4zWVVxxNvsgAPQTyT4W6LQuMJm4xxpiKqcZ"
+			]
+		}
+	},
+	"version": 1
+}
